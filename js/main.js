@@ -1,0 +1,1 @@
+const form = console.log(document.querySelector('#novoItem'))
