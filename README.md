@@ -1,5 +1,3 @@
-# alura-armazenando-na-web
-
 # Armazenando dados no navegador com localStorage
 
 * localStorage.setItem() para criar um novo par de chave: valor;
