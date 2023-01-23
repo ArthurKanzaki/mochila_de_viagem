@@ -4,16 +4,20 @@ const lista = document.querySelector('#lista') // Selecionando a tag ul com o el
 
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault() 
-    // preventDefault() prevenide, ou não deixa acontecer o comportamento padrão daquele evento
+    // preventDefault() preveni de, ou não deixa acontecer o comportamento padrão daquele evento
     // Neste caso, o submite envia o formulario e recarrega página, agora ele não vai mais recarregar
+    event.preventDefault() 
 
-    const nome = event.target.elements['nome'].value
-    const quantidade = event.target.elements['quantidade'].value
     // podemos capturar o input do evento do submite através do target.elements['nome do elemento']
+    const nome = event.target.elements['nome']
+    const quantidade = event.target.elements['quantidade']
 
-    criaElemento(nome, quantidade) 
     //chamando a função para criar o elemento
+    criaElemento(nome.value, quantidade.value) 
+
+    // Deixando a caixa de texto vazia após o clique no submit
+    nome.value = ""
+    quantidade.value = ""
 })
 
 function criaElemento(nome, quantidade) {
@@ -28,6 +32,4 @@ function criaElemento(nome, quantidade) {
     novoItem.innerHTML += nome
 
     lista.appendChild(novoItem) // adicionando o elemento LI ao seu pai UL, sendo assim, criando um novo objeto na tela
-
-
 }
