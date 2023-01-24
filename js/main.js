@@ -1,6 +1,6 @@
 const form = document.querySelector('#novoItem');
 const lista = document.querySelector('#lista') // Selecionando a tag ul com o elemento lista
-
+const itens = []
 
 
 form.addEventListener('submit', (event) => {
@@ -32,4 +32,13 @@ function criaElemento(nome, quantidade) {
     novoItem.innerHTML += nome
 
     lista.appendChild(novoItem) // adicionando o elemento LI ao seu pai UL, sendo assim, criando um novo objeto na tela
+
+    const itemAtual = { // Criando um dicionario para armazenar os dados do input
+        "nome": nome,
+        "quantidade":quantidade
+    }
+    
+    itens.push(itemAtual) // Adicionando o dicionário/objeto ao array
+
+    localStorage.setItem('item',JSON.stringify(itens)) //transformando o objeto/dicionário em strings com o JSON.stringify(itens)
 }

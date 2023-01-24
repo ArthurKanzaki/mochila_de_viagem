@@ -25,3 +25,15 @@ Preciamos transformar nosso objeto em string utilizando o JSON.stringify(objeto)
     }
     
     localStorage.setItem("item",JSON.stringify(itemAtual))
+
+Agora que já conseguimos transformar um elemento em uma string, precisamos criar um ARRAY para armazenar essa sequência de strings. Como?
+
+    const itemAtual = {
+        "nome": nome,
+        "quantidade":quantidade
+    }
+    
+    itens.push(itemAtual)       <- push adiciona um item ao array (itens é uma constante declarada como array)
+
+    localStorage.setItem("item",JSON.stringify(itens))
+}
