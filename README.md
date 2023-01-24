@@ -36,4 +36,3 @@ Agora que já conseguimos transformar um elemento em uma string, precisamos cria
     itens.push(itemAtual)       <- push adiciona um item ao array (itens é uma constante declarada como array)
 
     localStorage.setItem("item",JSON.stringify(itens))
-}
