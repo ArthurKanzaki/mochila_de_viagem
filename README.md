@@ -13,9 +13,9 @@
 
 **Armazenando múltiplos dados no navegador com localStorage**
 
-<p>Para salvar um dicionário no localStorage, devemos criar um objeto para armazená-lo. Porém, o localStorage só ler elementos json (só ler elementos no formato de string),
+Para salvar um dicionário no localStorage, devemos criar um objeto para armazená-lo. Porém, o localStorage só ler elementos json (só ler elementos no formato de string),
 precisamos transformar o elemento que estamos selecionando em uma string.
-<\p>
+
     Preciamos transformar nosso objeto em string utilizando o JSON.stringify(objeto). ex:
 
 ~~~
