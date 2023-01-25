@@ -1,5 +1,11 @@
  # localStorage
 
+ Estrutura básica de storage é composta por:
+
+    {
+    chave: 'valor';
+    }
+
 **Armazenando dados no navegador com localStorage**
 
 * localStorage.setItem() para criar um novo par de chave: valor;
@@ -36,3 +42,7 @@ Agora que já conseguimos transformar um elemento em uma string, precisamos cria
     itens.push(itemAtual)       <- push adiciona um item ao array (itens é uma constante declarada como array)
 
     localStorage.setItem("item",JSON.stringify(itens))
+
+**Consultando múltiplos dados no navegador com localStorage**
+
+Para consultar os itens salvos no array podemos utilizar o método localStorage.

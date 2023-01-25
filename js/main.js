@@ -40,5 +40,5 @@ function criaElemento(nome, quantidade) {
     
     itens.push(itemAtual) // Adicionando o dicionário/objeto ao array
 
-    localStorage.setItem('item',JSON.stringify(itens)) //transformando o objeto/dicionário em strings com o JSON.stringify(itens)
+    localStorage.setItem('itens',JSON.stringify(itens)) //transformando o objeto/dicionário em strings com o JSON.stringify(itens)
 }
