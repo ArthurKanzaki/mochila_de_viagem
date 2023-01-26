@@ -24,7 +24,6 @@ precisamos transformar o elemento que estamos selecionando em uma string.
 
 Preciamos transformar nosso objeto em string utilizando o JSON.stringify(objeto). ex:
 
-
     const itemAtual = {
         "nome": nome,
         "quantidade":quantidade
@@ -45,4 +44,14 @@ Agora que já conseguimos transformar um elemento em uma string, precisamos cria
 
 **Consultando múltiplos dados no navegador com localStorage**
 
-Para consultar os itens salvos no array podemos utilizar o método localStorage.
+Para consultar os itens salvos no array, antes devemos utilizar o método JSON.parse(). Com ele, da mesma forma que devemos transformar um objeto em uma string para enviar ao localStorage, para consultá-la também, devemos transformar em uma string para lermos do localStorage.
+
+Fazemos isso através do JSON.parse(localStorage.getItem("itens"))
+
+Para pegarmos os dados do localStorage ao recarregarmos a página, podemos fazer um forEach para iterar o array armazenado no navegador e buscarmos todos os elementos. Ex:
+
+    itens.forEach((elemento) => {
+        console.log(elemento.nome,elemento.quantidade)
+    })
+
+Agora, quando recarregamos o site, precisamos fazer que o javascript crie um elemento de acordo com cada item do array armazenado no localStorage.
